@@ -1,0 +1,60 @@
+{
+  "description": "20 g dose, 98 C. Continuous 38 ml low-pressure prewet, then a seven-second adaptive ramp to a 7 bar extraction with a 2.5 ml/s flow limit. Manual stop; 60-second extraction safety limit.",
+  "favorite": true,
+  "id": "8FrdXOUOSW",
+  "label": "Light Decaf Milk",
+  "phases": [
+    {
+      "duration": 15,
+      "name": "Continuous prewet",
+      "phase": "preinfusion",
+      "pump": {
+        "flow": 3.5,
+        "pressure": 2,
+        "target": "flow"
+      },
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "pumped",
+          "value": 38
+        }
+      ],
+      "temperature": 0,
+      "transition": {
+        "adaptive": true,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 60,
+      "name": "Extraction",
+      "phase": "brew",
+      "pump": {
+        "flow": 2.5,
+        "pressure": 7,
+        "target": "pressure"
+      },
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "volumetric",
+          "value": 0
+        }
+      ],
+      "temperature": 0,
+      "transition": {
+        "adaptive": true,
+        "duration": 7,
+        "type": "linear"
+      },
+      "valve": 1
+    }
+  ],
+  "selected": false,
+  "temperature": 98,
+  "type": "pro",
+  "utility": false
+}

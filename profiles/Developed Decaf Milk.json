@@ -1,0 +1,77 @@
+{
+  "description": "20 g dose, 90 C. Two-second unconditional 4 ml/s fill, then continue at 4 ml/s until 2 bar before a 1.7 ml/s extraction with an 8 bar pressure limit. Manual stop; 60-second extraction safety limit.",
+  "favorite": true,
+  "id": "D5hWxtIgf3",
+  "label": "Developed Decaf Milk",
+  "phases": [
+    {
+      "duration": 2,
+      "name": "Initial fast fill",
+      "phase": "preinfusion",
+      "pump": {
+        "flow": 4,
+        "pressure": 2,
+        "target": "flow"
+      },
+      "temperature": 0,
+      "transition": {
+        "adaptive": true,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 6,
+      "name": "Fast fill to 2 bar",
+      "phase": "preinfusion",
+      "pump": {
+        "flow": 4,
+        "pressure": 2,
+        "target": "flow"
+      },
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "pressure",
+          "value": 2
+        }
+      ],
+      "temperature": 0,
+      "transition": {
+        "adaptive": true,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 60,
+      "name": "Extraction",
+      "phase": "brew",
+      "pump": {
+        "flow": 1.7,
+        "pressure": 8,
+        "target": "flow"
+      },
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "volumetric",
+          "value": 0
+        }
+      ],
+      "temperature": 0,
+      "transition": {
+        "adaptive": true,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    }
+  ],
+  "selected": true,
+  "temperature": 90,
+  "type": "pro",
+  "utility": false
+}

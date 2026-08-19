@@ -1,0 +1,129 @@
+{
+  "description": "",
+  "favorite": true,
+  "id": "flush",
+  "label": "[Utility] Backflush",
+  "phases": [
+    {
+      "duration": 10,
+      "name": "Pressurize",
+      "phase": "brew",
+      "pump": 100,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 10,
+      "name": "Depressurize",
+      "phase": "brew",
+      "pump": 0,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 0
+    },
+    {
+      "duration": 10,
+      "name": "Pressurize",
+      "phase": "brew",
+      "pump": 100,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 10,
+      "name": "Depressurize",
+      "phase": "brew",
+      "pump": 0,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 0
+    },
+    {
+      "duration": 10,
+      "name": "Pressurize",
+      "phase": "brew",
+      "pump": 100,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 10,
+      "name": "Depressurize",
+      "phase": "brew",
+      "pump": 0,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 0
+    },
+    {
+      "duration": 10,
+      "name": "Pressurize",
+      "phase": "brew",
+      "pump": 100,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 10,
+      "name": "Depressurize",
+      "phase": "brew",
+      "pump": 0,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 0
+    },
+    {
+      "duration": 10,
+      "name": "Pressurize",
+      "phase": "brew",
+      "pump": 100,
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    }
+  ],
+  "selected": false,
+  "temperature": 93,
+  "type": "standard",
+  "utility": true
+}

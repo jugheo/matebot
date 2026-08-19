@@ -1,0 +1,111 @@
+{
+  "description": "Darker Roasts - Very Fine- 40-60s - 1:1.5-2.2",
+  "favorite": true,
+  "id": "lever",
+  "label": "Cremina lever machine",
+  "phases": [
+    {
+      "duration": 2,
+      "name": "preinfusion start",
+      "phase": "preinfusion",
+      "pump": {
+        "flow": 0,
+        "pressure": 1.1,
+        "target": "pressure"
+      },
+      "temperature": 86.5,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 3,
+      "name": "preinfusion",
+      "phase": "preinfusion",
+      "pump": {
+        "flow": 0,
+        "pressure": 1.1,
+        "target": "pressure"
+      },
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "pressure",
+          "value": 3
+        }
+      ],
+      "temperature": 86.5,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 10,
+      "name": "soak",
+      "phase": "preinfusion",
+      "pump": {
+        "flow": 0,
+        "pressure": 1.1,
+        "target": "pressure"
+      },
+      "temperature": 86.5,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 10,
+      "name": "ramp",
+      "phase": "brew",
+      "pump": {
+        "flow": 0,
+        "pressure": 9,
+        "target": "pressure"
+      },
+      "temperature": 86.5,
+      "transition": {
+        "adaptive": true,
+        "duration": 10,
+        "type": "ease-in-out"
+      },
+      "valve": 1
+    },
+    {
+      "duration": 50,
+      "name": "ramp-down",
+      "phase": "brew",
+      "pump": {
+        "flow": 0,
+        "pressure": 3,
+        "target": "pressure"
+      },
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "volumetric",
+          "value": 36
+        }
+      ],
+      "temperature": 87,
+      "transition": {
+        "adaptive": true,
+        "duration": 50,
+        "type": "linear"
+      },
+      "valve": 1
+    }
+  ],
+  "selected": false,
+  "temperature": 86.5,
+  "type": "pro",
+  "utility": false
+}

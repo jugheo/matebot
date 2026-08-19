@@ -1,0 +1,32 @@
+{
+  "description": "Default profile",
+  "favorite": true,
+  "id": "uqvvYK27H0",
+  "label": "Default",
+  "phases": [
+    {
+      "duration": 28,
+      "name": "Brew",
+      "phase": "brew",
+      "pump": 100,
+      "targets": [
+        {
+          "operator": "gte",
+          "type": "volumetric",
+          "value": 36
+        }
+      ],
+      "temperature": 0,
+      "transition": {
+        "adaptive": false,
+        "duration": 0,
+        "type": "instant"
+      },
+      "valve": 1
+    }
+  ],
+  "selected": false,
+  "temperature": 93,
+  "type": "standard",
+  "utility": false
+}
