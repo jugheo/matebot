@@ -70,7 +70,7 @@
       "valve": 1
     }
   ],
-  "selected": true,
+  "selected": false,
   "temperature": 90,
   "type": "pro",
   "utility": false

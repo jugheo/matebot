@@ -1,8 +1,8 @@
 {
-  "description": "20 g dose, 97 C. Two-second unconditional 3.5 ml/s fill, then continue at 3.5 ml/s until 2 bar before a 30-second pump-off bloom. Seven-second adaptive ramp to a 7 bar extraction with a 1.7 ml/s flow limit. Manual stop; 120-second extraction safety limit.",
+  "description": "Dose by headspace, 98 C. Two-second unconditional 3.5 ml/s fill, then continue at 3.5 ml/s until 2.5 bar before a 30-second pump-off bloom. Extract at 0.7 ml/s with a 6 bar pressure ceiling; manually stop around 1:2.3-1:2.5. Manual stop; 360-second extraction safety limit.",
   "favorite": true,
-  "id": "8FrdXOUOSW",
-  "label": "Light Decaf Milk",
+  "id": "1KL9JqlZVr",
+  "label": "Extreme Light",
   "phases": [
     {
       "duration": 2,
@@ -10,7 +10,7 @@
       "phase": "preinfusion",
       "pump": {
         "flow": 3.5,
-        "pressure": 2,
+        "pressure": 2.5,
         "target": "flow"
       },
       "temperature": 0,
@@ -23,18 +23,18 @@
     },
     {
       "duration": 10,
-      "name": "Fill to 2 bar",
+      "name": "Fill to 2.5 bar",
       "phase": "preinfusion",
       "pump": {
         "flow": 3.5,
-        "pressure": 2,
+        "pressure": 2.5,
         "target": "flow"
       },
       "targets": [
         {
           "operator": "gte",
           "type": "pressure",
-          "value": 2
+          "value": 2.5
         }
       ],
       "temperature": 0,
@@ -59,13 +59,13 @@
       "valve": 1
     },
     {
-      "duration": 120,
-      "name": "Extraction",
+      "duration": 360,
+      "name": "Extreme extraction",
       "phase": "brew",
       "pump": {
-        "flow": 1.7,
-        "pressure": 7,
-        "target": "pressure"
+        "flow": 0.7,
+        "pressure": 6,
+        "target": "flow"
       },
       "targets": [
         {
@@ -77,14 +77,14 @@
       "temperature": 0,
       "transition": {
         "adaptive": true,
-        "duration": 7,
-        "type": "linear"
+        "duration": 0,
+        "type": "instant"
       },
       "valve": 1
     }
   ],
-  "selected": true,
-  "temperature": 97,
+  "selected": false,
+  "temperature": 98,
   "type": "pro",
   "utility": false
 }
