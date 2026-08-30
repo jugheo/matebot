@@ -1,4 +1,11 @@
 {
  "id": "51",
- "rating": 2
+ "rating": 2,
+ "balanceTaste": "bitter",
+ "beanType": "Cafezal Black Lyon Decaf",
+ "grindSetting": "0.9",
+ "doseIn": "20.5",
+ "doseOut": "25",
+ "notes": "Grind much coarser",
+ "ratio": "1.22"
 }
