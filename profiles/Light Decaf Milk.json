@@ -1,5 +1,5 @@
 {
-  "description": "20 g dose, 97 C. Two-second unconditional 3.5 ml/s fill, then continue at 3.5 ml/s until 2 bar before a 30-second pump-off bloom. Seven-second adaptive ramp to a 7 bar extraction with a 1.7 ml/s flow limit. Manual stop; 120-second extraction safety limit.",
+  "description": "20 g dose, 97 C. Two-second unconditional 3.5 ml/s fill, then continue at 3.5 ml/s until 2 bar before a 30-second pump-off bloom. Seven-second adaptive ramp to a 7 bar extraction with a 1.7 ml/s flow limit. Stop at 38 g by weight; 120-second extraction safety timeout.",
   "favorite": true,
   "id": "8FrdXOUOSW",
   "label": "Light Decaf Milk",
@@ -17,6 +17,7 @@
       "transition": {
         "adaptive": true,
         "duration": 0,
+        "target": "time",
         "type": "instant"
       },
       "valve": 1
@@ -41,6 +42,7 @@
       "transition": {
         "adaptive": true,
         "duration": 0,
+        "target": "time",
         "type": "instant"
       },
       "valve": 1
@@ -54,6 +56,7 @@
       "transition": {
         "adaptive": false,
         "duration": 0,
+        "target": "time",
         "type": "instant"
       },
       "valve": 1
@@ -71,19 +74,20 @@
         {
           "operator": "gte",
           "type": "volumetric",
-          "value": 0
+          "value": 38
         }
       ],
       "temperature": 0,
       "transition": {
         "adaptive": true,
         "duration": 7,
+        "target": "time",
         "type": "linear"
       },
       "valve": 1
     }
   ],
-  "selected": false,
+  "selected": true,
   "temperature": 97,
   "type": "pro",
   "utility": false
