@@ -4,7 +4,7 @@
   "autowakeupEnabled": false,
   "autowakeupSchedules": "07:00|1111111",
   "boilerFillActive": false,
-  "brewDelay": 1442.375856,
+  "brewDelay": 2110.570369,
   "buttonBehavior": "brew,steam,water",
   "clock24hFormat": true,
   "commutationGain": 0.7,
