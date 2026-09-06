@@ -87,7 +87,7 @@
       "valve": 1
     }
   ],
-  "selected": false,
+  "selected": true,
   "temperature": 97,
   "type": "pro",
   "utility": false
